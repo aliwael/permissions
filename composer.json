@@ -1,0 +1,16 @@
+{
+  "name": "aliwael/permissions",
+  "description": "Laravel package for user permissions management.",
+  "autoload": {
+    "psr-4": {
+      "Permissions\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Permissions\\Providers\\PermissionsServiceProvider"
+      ]
+    }
+  }
+}
