@@ -18,13 +18,19 @@
 composer require aliwael/permissions
 ```
 
-2. نفذ الميجريشن:
+2. انقل ملفات الميجريشن وملف الهيلبر تلقائياً:
+
+```bash
+php artisan vendor:publish --tag=permissions-assets
+```
+
+3. نفذ الميجريشن:
 
 ```bash
 php artisan migrate
 ```
 
-3. أضف Traits إلى موديل المستخدم:
+4. أضف Traits إلى موديل المستخدم:
 
 ```php
 use Permissions\Traits\HasPermissions;
