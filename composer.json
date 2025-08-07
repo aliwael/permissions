@@ -6,6 +6,30 @@
       "Permissions\\": "src/"
     }
   },
+  "authors": [
+    {
+      "name": "Ali Wale",
+      "email": "dev.aliwaell@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "type": "library",
+  "keywords": [
+    "laravel",
+    "permissions"
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "^10.0",
+    "mockery/mockery": "^1.4",
+    "orchestra/testbed": "^6.0"
+  },
+  "require": {
+    "php": ">=8.2",
+    "laravel/framework": "^12.0"
+  },
   "extra": {
     "laravel": {
       "providers": [
