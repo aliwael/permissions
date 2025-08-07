@@ -3,7 +3,7 @@
   "description": "Laravel package for user permissions management.",
   "autoload": {
     "psr-4": {
-      "Permissions\\": "src/"
+      "aliwael\\Permissions\\": "./src"
     }
   },
   "authors": [
@@ -33,7 +33,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Permissions\\Providers\\PermissionsServiceProvider"
+        "aliwael\\Permissions\\Providers\\PermissionsServiceProvider"
       ]
     }
   }
