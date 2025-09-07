@@ -1,6 +1,6 @@
 <?php
 
-namespace Permissions\Middleware;
+namespace Aliwael\Permissions\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

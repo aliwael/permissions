@@ -11,8 +11,8 @@ class PermissionsServiceProvider extends ServiceProvider
     {
         // Register middleware
         $router = $this->app['router'];
-        $router->aliasMiddleware('permission', \Permissions\Middleware\CheckPermission::class);
-        $router->aliasMiddleware('role', \Permissions\Middleware\CheckRole::class);
+        $router->aliasMiddleware('permission', \Aliwael\Permissions\Middleware\CheckPermission::class);
+        $router->aliasMiddleware('role', \Aliwael\Permissions\Middleware\CheckRole::class);
 
         // Publish migrations automatically
         $this->publishes([
