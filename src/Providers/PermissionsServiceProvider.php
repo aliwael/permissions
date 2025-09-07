@@ -1,6 +1,6 @@
 <?php
 
-namespace Permissions\Providers;
+namespace Aliwael\Permissions\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route;
