@@ -1,36 +1,36 @@
 # Permissions Package for Laravel
 
-إدارة الصلاحيات والأدوار للمستخدمين في Laravel.
+Manage user permissions and roles in Laravel.
 
-## المميزات
+## Features
 
-- إدارة الصلاحيات (Permissions) وربطها بالمستخدمين.
-- إدارة الأدوار (Roles) وربطها بالمستخدمين والصلاحيات.
-- ميدلواير للتحقق من الصلاحية أو الدور.
-- Traits لإضافة الصلاحيات والأدوار لموديل المستخدم.
-- ميجريشن جاهز للجداول المطلوبة.
+- Manage permissions and assign them to users.
+- Manage roles and assign them to users and permissions.
+- Middleware to check for permissions or roles.
+- Traits to add permissions and roles to the User model.
+- Ready-to-use migrations for all required tables.
 
-## التثبيت
+## Installation
 
-1. أضف الباكيج إلى مشروعك:
+1. Add the package to your project:
 
 ```bash
 composer require aliwael/permissions
 ```
 
-2. انقل ملفات الميجريشن وملف الهيلبر تلقائياً:
+2. Publish migration and helper files automatically:
 
 ```bash
 php artisan vendor:publish --tag=permissions-assets
 ```
 
-3. نفذ الميجريشن:
+3. Run the migrations:
 
 ```bash
 php artisan migrate
 ```
 
-4. أضف Traits إلى موديل المستخدم:
+4. Add Traits to your User model:
 
 ```php
 use Permissions\Traits\HasPermissions;
@@ -43,16 +43,16 @@ class User extends Authenticatable
 }
 ```
 
-## الاستخدام
+## Usage
 
-### إسناد صلاحية أو دور
+### Assign Permission or Role
 
 ```php
 $user->givePermission('edit-post');
 $user->assignRole('admin');
 ```
 
-### التحقق من الصلاحية أو الدور
+### Check Permission or Role
 
 ```php
 $user->hasPermission('edit-post');
@@ -60,7 +60,7 @@ $user->hasRole('admin');
 $user->hasPermissionViaRole('edit-post');
 ```
 
-### ميدلواير في الراوتات
+### Middleware in Routes
 
 ```php
 Route::get('/admin', function () {
@@ -72,19 +72,19 @@ Route::post('/post', function () {
 })->middleware('permission:edit-post');
 ```
 
-## الجداول
+## Tables
 
-- **permissions**: الصلاحيات.
-- **roles**: الأدوار.
-- **user_permission**: ربط المستخدم بالصلاحية.
-- **role_user**: ربط المستخدم بالدور.
-- **permission_role**: ربط الدور بالصلاحية.
+- **permissions**: Permissions.
+- **roles**: Roles.
+- **user_permission**: User-permission pivot table.
+- **role_user**: User-role pivot table.
+- **permission_role**: Role-permission pivot table.
 
-## مساهمات
+## Contributions
 
-للمساهمة أو الإبلاغ عن مشكلة، يرجى فتح Issue أو Pull Request على:
+To contribute or report an issue, please open an Issue or Pull Request at:
 [https://github.com/aliwael/permissions](https://github.com/aliwael/permissions)
 
 ---
 
-تم تطوير الباكيج لسهولة إدارة الصلاحيات والأدوار في مشاريع Laravel.
+This package was developed to make managing permissions and roles in Laravel projects easy.
