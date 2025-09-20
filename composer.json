@@ -33,7 +33,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Aliwael\\Permissions\\Providers\\PermissionsServiceProvider"
+        "aliwael\\permissions\\Providers\\PermissionsServiceProvider"
       ]
     }
   }
